@@ -13,7 +13,7 @@ class Huerta {
   var property capacidadDeProduccion
 
   method esBueno() = capacidadDeProduccion > nivelFijo.nivelMinimo()
-  method recibirAtaque(unaPlaga) {capacidadDeProduccion -= unaPlaga.nivelDeDanio() * 0.1}
+  method recibirAtaque(unaPlaga) {capacidadDeProduccion -= (unaPlaga.nivelDeDanio() * 0.1) if (unaPlaga.transmiteEnfermedades()) {+10}}
 }
 
 object nivelFijo {

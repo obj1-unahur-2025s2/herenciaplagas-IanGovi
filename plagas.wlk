@@ -36,6 +36,6 @@ class PlagaDeGarrapatas inherits PlagaDePulgas{
 
 class PlagaDeMosquitos inherits Plagas {
     method nivelDeDanio() = poblacion
-    override method transmiteEnfermedades()= poblacion % 3 && super()
+    override method transmiteEnfermedades()= poblacion % 3 == 0 && super()
 
 }
